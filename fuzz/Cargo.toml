@@ -1,0 +1,21 @@
+[package]
+name = "fuzz-path-to-error"
+version = "0.1.0"
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+honggfuzz = "0.5.55"
+serde = "1.0.96"
+
+[dependencies.ciborium]
+path = "../ciborium"
+
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "fuzz_from_reader"
+path = "fuzz_targets/fuzz_from_reader.rs"
