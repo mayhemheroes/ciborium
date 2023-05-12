@@ -1,0 +1,5 @@
+project: ciborium
+target: fuzz-from-reader
+
+cmds:
+    - cmd: /fuzz_from_reader
